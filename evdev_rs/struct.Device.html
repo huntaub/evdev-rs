@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Device` struct in crate `evdev_rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Device">
+
+    <title>evdev_rs::Device - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct Device</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>evdev_rs</a></p><script>window.sidebarCurrent = {name: 'Device', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>evdev_rs</a>::<wbr><a class="struct" href=''>Device</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/evdev_rs/lib.rs.html#133-135' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Device { /* fields omitted */ }</pre><div class='docblock'><p>Opaque struct representing an evdev device</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../evdev_rs/struct.Device.html" title="struct evdev_rs::Device">Device</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#169-821' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../evdev_rs/struct.Device.html" title="struct evdev_rs::Device">Device</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#174-186' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initialize a new libevdev device.</p>
+
+<p>This function only initializesthe struct to sane default values.
+To actually hook up the device to a kernel device, use <code>set_fd</code>.</p>
+</div><h4 id='method.new_from_fd' class="method"><span id='new_from_fd.v' class='invisible'><code>pub fn <a href='#method.new_from_fd' class='fnname'>new_from_fd</a>(fd: &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/std/fs/struct.File.html" title="struct std::fs::File">File</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../evdev_rs/struct.Device.html" title="struct evdev_rs::Device">Device</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#200-210' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initialize a new libevdev device from the given fd.</p>
+
+<p>This is a shortcut for</p>
+
+<pre class="rust rust-example-rendered">
+<span class="kw">use</span> <span class="ident">evdev_rs</span>::<span class="ident">Device</span>;
+
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">device</span> <span class="op">=</span> <span class="ident">Device</span>::<span class="ident">new</span>().<span class="ident">unwrap</span>();
+<span class="ident">device</span>.<span class="ident">set_fd</span>(<span class="kw-2">&amp;</span><span class="ident">fd</span>);</pre>
+</div><h4 id='method.name' class="method"><span id='name.v' class='invisible'><code>pub fn <a href='#method.name' class='fnname'>name</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#4-8' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.phys' class="method"><span id='phys.v' class='invisible'><code>pub fn <a href='#method.phys' class='fnname'>phys</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#4-8' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.uniq' class="method"><span id='uniq.v' class='invisible'><code>pub fn <a href='#method.uniq' class='fnname'>uniq</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#4-8' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_name' class="method"><span id='set_name.v' class='invisible'><code>pub fn <a href='#method.set_name' class='fnname'>set_name</a>(&amp;self, field: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#16-21' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_phys' class="method"><span id='set_phys.v' class='invisible'><code>pub fn <a href='#method.set_phys' class='fnname'>set_phys</a>(&amp;self, field: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#16-21' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_uniq' class="method"><span id='set_uniq.v' class='invisible'><code>pub fn <a href='#method.set_uniq' class='fnname'>set_uniq</a>(&amp;self, field: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#16-21' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.fd' class="method"><span id='fd.v' class='invisible'><code>pub fn <a href='#method.fd' class='fnname'>fd</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/std/fs/struct.File.html" title="struct std::fs::File">File</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#222-235' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the file associated with the device</p>
+
+<p>if the <code>set_fd</code> hasn&#39;t been called yet then it return <code>None</code></p>
+</div><h4 id='method.set_fd' class="method"><span id='set_fd.v' class='invisible'><code>pub fn <a href='#method.set_fd' class='fnname'>set_fd</a>(&amp;mut self, f: &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/std/fs/struct.File.html" title="struct std::fs::File">File</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#245-254' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the file for this struct and initialize internal data.</p>
+
+<p>This function may only be called once per device. If the device changed and
+you need to re-read a device, use <code>new</code> method. If you need to change the file after
+closing and re-opening the same device, use <code>change_fd</code>.</p>
+
+<p>Unless otherwise specified, evdev function behavior is undefined until
+a successfull call to <code>set_fd</code>.</p>
+</div><h4 id='method.change_fd' class="method"><span id='change_fd.v' class='invisible'><code>pub fn <a href='#method.change_fd' class='fnname'>change_fd</a>(&amp;mut self, f: &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/std/fs/struct.File.html" title="struct std::fs::File">File</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#275-284' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Change the fd for this device, without re-reading the actual device.</p>
+
+<p>If the fd changes after initializing the device, for example after a
+VT-switch in the X.org X server, this function updates the internal fd
+to the newly opened. No check is made that new fd points to the same
+device. If the device has changed, evdev&#39;s behavior is undefined.</p>
+
+<p>evdev device does not sync itself after changing the fd and keeps the current
+device state. Use next_event with the FORCE_SYNC flag to force a re-sync.</p>
+
+<h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
+<div class='information'><div class='tooltip ignore'>⚠<span class='tooltiptext'>Be careful when using this code, it's not being tested!</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="ident">dev</span>.<span class="ident">change_fd</span>(<span class="ident">new_fd</span>);
+<span class="ident">dev</span>.<span class="ident">next_event</span>(<span class="ident">evdev</span>::<span class="ident">FORCE_SYNC</span>);
+<span class="kw">while</span> <span class="ident">dev</span>.<span class="ident">next_event</span>(<span class="ident">evdev</span>::<span class="ident">SYNC</span>).<span class="ident">ok</span>().<span class="ident">unwrap</span>().<span class="number">0</span> <span class="op">==</span> <span class="ident">ReadStatus</span>::<span class="ident">SYNC</span>
+                            {} <span class="comment">// noop</span></pre>
+
+<p>It is an error to call this function before calling set_fd().</p>
+</div><h4 id='method.grab' class="method"><span id='grab.v' class='invisible'><code>pub fn <a href='#method.grab' class='fnname'>grab</a>(&amp;mut self, grab: <a class="enum" href="../evdev_rs/enum.GrabMode.html" title="enum evdev_rs::GrabMode">GrabMode</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#292-301' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Grab or ungrab the device through a kernel EVIOCGRAB.</p>
+
+<p>This prevents other clients (including kernel-internal ones such as
+rfkill) from receiving events from this device. This is generally a
+bad idea. Don&#39;t do this.Grabbing an already grabbed device, or
+ungrabbing an ungrabbed device is a noop and always succeeds.</p>
+</div><h4 id='method.abs_info' class="method"><span id='abs_info.v' class='invisible'><code>pub fn <a href='#method.abs_info' class='fnname'>abs_info</a>(&amp;self, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../evdev_rs/struct.AbsInfo.html" title="struct evdev_rs::AbsInfo">AbsInfo</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#307-328' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get the axis info for the given axis, as advertised by the kernel.</p>
+
+<p>Returns the <code>AbsInfo</code> for the given the code or None if the device
+doesn&#39;t support this code</p>
+</div><h4 id='method.set_abs_info' class="method"><span id='set_abs_info.v' class='invisible'><code>pub fn <a href='#method.set_abs_info' class='fnname'>set_abs_info</a>(&amp;self, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>, absinfo: &amp;<a class="struct" href="../evdev_rs/struct.AbsInfo.html" title="struct evdev_rs::AbsInfo">AbsInfo</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#334-349' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Change the abs info for the given EV_ABS event code, if the code exists.</p>
+
+<p>This function has no effect if <code>has_event_code</code> returns false for
+this code.</p>
+</div><h4 id='method.has' class="method"><span id='has.v' class='invisible'><code>pub fn <a href='#method.has' class='fnname'>has</a>(&amp;self, blob: &amp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#352-362' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns <code>true</code> if device support the InputProp/EventType/EventCode and false otherwise</p>
+</div><h4 id='method.enable' class="method"><span id='enable.v' class='invisible'><code>pub fn <a href='#method.enable' class='fnname'>enable</a>(&amp;self, blob: &amp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#370-380' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Forcibly enable an EventType/InputProp on this device, even if the underlying
+device does not support it. While this cannot make the device actually
+report such events, it will now return true for has().</p>
+
+<p>This is a local modification only affecting only this representation of
+this device.</p>
+</div><h4 id='method.event_value' class="method"><span id='event_value.v' class='invisible'><code>pub fn <a href='#method.event_value' class='fnname'>event_value</a>(&amp;self, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#421-435' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current value of the event type.</p>
+
+<p>If the device supports this event type and code, the return value is
+set to the current value of this axis. Otherwise, <code>None</code> is returned.</p>
+</div><h4 id='method.set_event_value' class="method"><span id='set_event_value.v' class='invisible'><code>pub fn <a href='#method.set_event_value' class='fnname'>set_event_value</a>(&amp;self, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#453-467' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the value for a given event type and code.</p>
+
+<p>This only makes sense for some event types, e.g. setting the value for
+EV_REL is pointless.</p>
+
+<p>This is a local modification only affecting only this representation of
+this device. A future call to event_value() will return this
+value, unless the value was overwritten by an event.</p>
+
+<p>If the device supports ABS_MT_SLOT, the value set for any ABS_MT_*
+event code is the value of the currently active slot. You should use
+<code>set_slot_value</code> instead.</p>
+
+<p>If the device supports ABS_MT_SLOT and the type is EV_ABS and the code is
+ABS_MT_SLOT, the value must be a positive number less then the number of
+slots on the device. Otherwise, <code>set_event_value</code> returns Err.</p>
+</div><h4 id='method.has_event_pending' class="method"><span id='has_event_pending.v' class='invisible'><code>pub fn <a href='#method.has_event_pending' class='fnname'>has_event_pending</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#482-486' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Check if there are events waiting for us.</p>
+
+<p>This function does not read an event off the fd and may not access the
+fd at all. If there are events queued internally this function will
+return non-zero. If the internal queue is empty, this function will poll
+the file descriptor for data.</p>
+
+<p>This is a convenience function for simple processes, most complex programs
+are expected to use select(2) or poll(2) on the file descriptor. The kernel
+guarantees that if data is available, it is a multiple of sizeof(struct
+input_event), and thus calling <code>next_event</code> when select(2) or
+poll(2) return is safe. You do not need <code>has_event_pending</code> if
+you&#39;re using select(2) or poll(2).</p>
+</div><h4 id='method.product_id' class="method"><span id='product_id.v' class='invisible'><code>pub fn <a href='#method.product_id' class='fnname'>product_id</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#29-33' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.vendor_id' class="method"><span id='vendor_id.v' class='invisible'><code>pub fn <a href='#method.vendor_id' class='fnname'>vendor_id</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#29-33' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.bustype' class="method"><span id='bustype.v' class='invisible'><code>pub fn <a href='#method.bustype' class='fnname'>bustype</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#29-33' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.version' class="method"><span id='version.v' class='invisible'><code>pub fn <a href='#method.version' class='fnname'>version</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#29-33' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_product_id' class="method"><span id='set_product_id.v' class='invisible'><code>pub fn <a href='#method.set_product_id' class='fnname'>set_product_id</a>(&amp;self, field: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#41-45' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_vendor_id' class="method"><span id='set_vendor_id.v' class='invisible'><code>pub fn <a href='#method.set_vendor_id' class='fnname'>set_vendor_id</a>(&amp;self, field: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#41-45' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_bustype' class="method"><span id='set_bustype.v' class='invisible'><code>pub fn <a href='#method.set_bustype' class='fnname'>set_bustype</a>(&amp;self, field: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#41-45' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_version' class="method"><span id='set_version.v' class='invisible'><code>pub fn <a href='#method.set_version' class='fnname'>set_version</a>(&amp;self, field: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#41-45' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.driver_version' class="method"><span id='driver_version.v' class='invisible'><code>pub fn <a href='#method.driver_version' class='fnname'>driver_version</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#499-503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Return the driver version of a device already intialize with <code>set_fd</code></p>
+</div><h4 id='method.abs_minimum' class="method"><span id='abs_minimum.v' class='invisible'><code>pub fn <a href='#method.abs_minimum' class='fnname'>abs_minimum</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#53-63' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.abs_maximum' class="method"><span id='abs_maximum.v' class='invisible'><code>pub fn <a href='#method.abs_maximum' class='fnname'>abs_maximum</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#53-63' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.abs_fuzz' class="method"><span id='abs_fuzz.v' class='invisible'><code>pub fn <a href='#method.abs_fuzz' class='fnname'>abs_fuzz</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#53-63' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.abs_flat' class="method"><span id='abs_flat.v' class='invisible'><code>pub fn <a href='#method.abs_flat' class='fnname'>abs_flat</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#53-63' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.abs_resolution' class="method"><span id='abs_resolution.v' class='invisible'><code>pub fn <a href='#method.abs_resolution' class='fnname'>abs_resolution</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#53-63' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_abs_minimum' class="method"><span id='set_abs_minimum.v' class='invisible'><code>pub fn <a href='#method.set_abs_minimum' class='fnname'>set_abs_minimum</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_abs_maximum' class="method"><span id='set_abs_maximum.v' class='invisible'><code>pub fn <a href='#method.set_abs_maximum' class='fnname'>set_abs_maximum</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_abs_fuzz' class="method"><span id='set_abs_fuzz.v' class='invisible'><code>pub fn <a href='#method.set_abs_fuzz' class='fnname'>set_abs_fuzz</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_abs_flat' class="method"><span id='set_abs_flat.v' class='invisible'><code>pub fn <a href='#method.set_abs_flat' class='fnname'>set_abs_flat</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.set_abs_resolution' class="method"><span id='set_abs_resolution.v' class='invisible'><code>pub fn <a href='#method.set_abs_resolution' class='fnname'>set_abs_resolution</a>(&amp;self, code: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/macros.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.slot_value' class="method"><span id='slot_value.v' class='invisible'><code>pub fn <a href='#method.slot_value' class='fnname'>slot_value</a>(&amp;self, slot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#522-536' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Return the current value of the code for the given slot.</p>
+
+<p>If the device supports this event code, the return value is
+is set to the current value of this axis. Otherwise, or
+if the event code is not an ABS_MT_* event code, <code>None</code> is returned</p>
+</div><h4 id='method.set_slot_value' class="method"><span id='set_slot_value.v' class='invisible'><code>pub fn <a href='#method.set_slot_value' class='fnname'>set_slot_value</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;slot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;val: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#546-560' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the value for a given code for the given slot.</p>
+
+<p>This is a local modification only affecting only this representation of
+this device. A future call to <code>slot_value</code> will return this value,
+unless the value was overwritten by an event.</p>
+
+<p>This function does not set event values for axes outside the ABS_MT range,
+use <code>set_event_value</code> instead.</p>
+</div><h4 id='method.num_slots' class="method"><span id='num_slots.v' class='invisible'><code>pub fn <a href='#method.num_slots' class='fnname'>num_slots</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#569-578' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get the number of slots supported by this device.</p>
+
+<p>The number of slots supported, or <code>None</code> if the device does not provide
+any slots</p>
+
+<p>A device may provide ABS_MT_SLOT but a total number of 0 slots. Hence
+the return value of <code>None</code> for &quot;device does not provide slots at all&quot;</p>
+</div><h4 id='method.current_slot' class="method"><span id='current_slot.v' class='invisible'><code>pub fn <a href='#method.current_slot' class='fnname'>current_slot</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#587-596' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get the currently active slot.</p>
+
+<p>This may differ from the value an ioctl may return at this time as
+events may have been read off the fd since changing the slot value
+but those events are still in the buffer waiting to be processed.
+The returned value is the value a caller would see if it were to
+process events manually one-by-one.</p>
+</div><h4 id='method.disable' class="method"><span id='disable.v' class='invisible'><code>pub fn <a href='#method.disable' class='fnname'>disable</a>(&amp;self, blob: &amp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/any/trait.Any.html" title="trait core::any::Any">Any</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#645-653' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Forcibly disable an EventType/EventCode on this device, even if the
+underlying device provides it. This effectively mutes the respective set of
+events. has() will return false for this EventType/EventCode</p>
+
+<p>In most cases, a caller likely only wants to disable a single code, not
+the whole type.</p>
+
+<p>Disabling EV_SYN will not work. In Peter&#39;s Words &quot;Don&#39;t shoot yourself
+in the foot. It hurts&quot;.</p>
+
+<p>This is a local modification only affecting only this representation of
+this device.</p>
+</div><h4 id='method.set_kernel_abs_info' class="method"><span id='set_kernel_abs_info.v' class='invisible'><code>pub fn <a href='#method.set_kernel_abs_info' class='fnname'>set_kernel_abs_info</a>(&amp;self, code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>, absinfo: &amp;<a class="struct" href="../evdev_rs/struct.AbsInfo.html" title="struct evdev_rs::AbsInfo">AbsInfo</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#711-726' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the device&#39;s EV_ABS axis to the value defined in the abs
+parameter. This will be written to the kernel.</p>
+</div><h4 id='method.kernel_set_led_value' class="method"><span id='kernel_set_led_value.v' class='invisible'><code>pub fn <a href='#method.kernel_set_led_value' class='fnname'>kernel_set_led_value</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;code: &amp;<a class="enum" href="../evdev_rs/enums/enum.EventCode.html" title="enum evdev_rs::enums::EventCode">EventCode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: <a class="enum" href="../evdev_rs/enum.LedState.html" title="enum evdev_rs::LedState">LedState</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#731-744' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Turn an LED on or off.</p>
+
+<p>enabling an LED requires write permissions on the device&#39;s file descriptor.</p>
+</div><h4 id='method.set_clock_id' class="method"><span id='set_clock_id.v' class='invisible'><code>pub fn <a href='#method.set_clock_id' class='fnname'>set_clock_id</a>(&amp;self, clockid: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#751-761' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the clock ID to be used for timestamps. Further events from this device
+will report an event time based on the given clock.</p>
+
+<p>This is a modification only affecting this representation of
+this device.</p>
+</div><h4 id='method.next_event' class="method"><span id='next_event.v' class='invisible'><code>pub fn <a href='#method.next_event' class='fnname'>next_event</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="struct" href="../evdev_rs/struct.ReadFlag.html" title="struct evdev_rs::ReadFlag">ReadFlag</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a><a class="enum" href="../evdev_rs/enum.ReadStatus.html" title="enum evdev_rs::ReadStatus">ReadStatus</a>, <a class="struct" href="../evdev_rs/struct.InputEvent.html" title="struct evdev_rs::InputEvent">InputEvent</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a>, Errno&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#789-820' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get the next event from the device. This function operates in two different
+modes: normal mode or sync mode.</p>
+
+<p>In normal mode (when flags has <code>evdev::NORMAL</code> set), this function returns
+<code>ReadStatus::Success</code> and returns the event. If no events are available at
+this time, it returns <code>-EAGAIN</code> as <code>Err</code>.</p>
+
+<p>If the current event is an <code>EV_SYN::SYN_DROPPED</code> event, this function returns
+<code>ReadStatus::Sync</code> and is set to the <code>EV_SYN</code> event.The caller should now call
+this function with the <code>evdev::SYNC</code> flag set, to get the set of events that
+make up the device state delta. This function returns ReadStatus::Sync for
+each event part of that delta, until it returns <code>-EAGAIN</code> once all events
+have been synced.</p>
+
+<p>If a device needs to be synced by the caller but the caller does not call
+with the <code>evdev::SYNC</code> flag set, all events from the diff are dropped after
+evdev updates its internal state and event processing continues as normal.
+Note that the current slot and the state of touch points may have updated
+during the <code>SYN_DROPPED</code> event, it is strongly recommended that a caller
+ignoring all sync events calls <code>current_slot</code> and checks the
+<code>ABS_MT_TRACKING_ID</code> values for all slots.</p>
+
+<p>If a device has changed state without events being enqueued in evdev,
+e.g. after changing the file descriptor, use the <code>evdev::FORCE_SYNC</code> flag.
+This triggers an internal sync of the device and <code>next_event</code> returns
+<code>ReadStatus::Sync</code>.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Drop' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html" title="trait core::ops::drop::Drop">Drop</a> for <a class="struct" href="../evdev_rs/struct.Device.html" title="struct evdev_rs::Device">Device</a></code><a href='#impl-Drop' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#858-864' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class="method"><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/evdev_rs/lib.rs.html#859-863' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Executes the destructor for this type. <a href="https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "evdev_rs";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

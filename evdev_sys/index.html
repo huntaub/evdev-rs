@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `evdev_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, evdev_sys">
+
+    <title>evdev_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate evdev_sys</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'evdev_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>evdev_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/evdev_sys/lib.rs.html#1-190' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.input_absinfo.html"
+                                  title='struct evdev_sys::input_absinfo'>input_absinfo</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.input_event.html"
+                                  title='struct evdev_sys::input_event'>input_event</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.timeval.html"
+                                  title='struct evdev_sys::timeval'>timeval</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.va_list.html"
+                                  title='struct evdev_sys::va_list'>va_list</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.libevdev.html"
+                                  title='enum evdev_sys::libevdev'>libevdev</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_GRAB.html"
+                                  title='constant evdev_sys::LIBEVDEV_GRAB'>LIBEVDEV_GRAB</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_LED_OFF.html"
+                                  title='constant evdev_sys::LIBEVDEV_LED_OFF'>LIBEVDEV_LED_OFF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_LED_ON.html"
+                                  title='constant evdev_sys::LIBEVDEV_LED_ON'>LIBEVDEV_LED_ON</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_LOG_DEBUG.html"
+                                  title='constant evdev_sys::LIBEVDEV_LOG_DEBUG'>LIBEVDEV_LOG_DEBUG</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_LOG_ERROR.html"
+                                  title='constant evdev_sys::LIBEVDEV_LOG_ERROR'>LIBEVDEV_LOG_ERROR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_LOG_INFO.html"
+                                  title='constant evdev_sys::LIBEVDEV_LOG_INFO'>LIBEVDEV_LOG_INFO</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_FLAG_BLOCKING.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_FLAG_BLOCKING'>LIBEVDEV_READ_FLAG_BLOCKING</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_FLAG_FORCE_SYNC.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_FLAG_FORCE_SYNC'>LIBEVDEV_READ_FLAG_FORCE_SYNC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_FLAG_NORMAL.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_FLAG_NORMAL'>LIBEVDEV_READ_FLAG_NORMAL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_FLAG_SYNC.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_FLAG_SYNC'>LIBEVDEV_READ_FLAG_SYNC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_STATUS_SUCCESS.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_STATUS_SUCCESS'>LIBEVDEV_READ_STATUS_SUCCESS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_READ_STATUS_SYNC.html"
+                                  title='constant evdev_sys::LIBEVDEV_READ_STATUS_SYNC'>LIBEVDEV_READ_STATUS_SYNC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.LIBEVDEV_UNGRAB.html"
+                                  title='constant evdev_sys::LIBEVDEV_UNGRAB'>LIBEVDEV_UNGRAB</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_change_fd.html"
+                                  title='fn evdev_sys::libevdev_change_fd'>libevdev_change_fd</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_disable_event_code.html"
+                                  title='fn evdev_sys::libevdev_disable_event_code'>libevdev_disable_event_code</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_disable_event_type.html"
+                                  title='fn evdev_sys::libevdev_disable_event_type'>libevdev_disable_event_type</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_enable_event_code.html"
+                                  title='fn evdev_sys::libevdev_enable_event_code'>libevdev_enable_event_code</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_enable_event_type.html"
+                                  title='fn evdev_sys::libevdev_enable_event_type'>libevdev_enable_event_type</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_enable_property.html"
+                                  title='fn evdev_sys::libevdev_enable_property'>libevdev_enable_property</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_code_from_name.html"
+                                  title='fn evdev_sys::libevdev_event_code_from_name'>libevdev_event_code_from_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_code_from_name_n.html"
+                                  title='fn evdev_sys::libevdev_event_code_from_name_n'>libevdev_event_code_from_name_n</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_code_get_name.html"
+                                  title='fn evdev_sys::libevdev_event_code_get_name'>libevdev_event_code_get_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_is_code.html"
+                                  title='fn evdev_sys::libevdev_event_is_code'>libevdev_event_is_code</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_is_type.html"
+                                  title='fn evdev_sys::libevdev_event_is_type'>libevdev_event_is_type</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_type_from_name.html"
+                                  title='fn evdev_sys::libevdev_event_type_from_name'>libevdev_event_type_from_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_type_from_name_n.html"
+                                  title='fn evdev_sys::libevdev_event_type_from_name_n'>libevdev_event_type_from_name_n</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_type_get_max.html"
+                                  title='fn evdev_sys::libevdev_event_type_get_max'>libevdev_event_type_get_max</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_event_type_get_name.html"
+                                  title='fn evdev_sys::libevdev_event_type_get_name'>libevdev_event_type_get_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_fetch_event_value.html"
+                                  title='fn evdev_sys::libevdev_fetch_event_value'>libevdev_fetch_event_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_fetch_slot_value.html"
+                                  title='fn evdev_sys::libevdev_fetch_slot_value'>libevdev_fetch_slot_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_free.html"
+                                  title='fn evdev_sys::libevdev_free'>libevdev_free</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_flat.html"
+                                  title='fn evdev_sys::libevdev_get_abs_flat'>libevdev_get_abs_flat</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_fuzz.html"
+                                  title='fn evdev_sys::libevdev_get_abs_fuzz'>libevdev_get_abs_fuzz</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_info.html"
+                                  title='fn evdev_sys::libevdev_get_abs_info'>libevdev_get_abs_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_maximum.html"
+                                  title='fn evdev_sys::libevdev_get_abs_maximum'>libevdev_get_abs_maximum</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_minimum.html"
+                                  title='fn evdev_sys::libevdev_get_abs_minimum'>libevdev_get_abs_minimum</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_abs_resolution.html"
+                                  title='fn evdev_sys::libevdev_get_abs_resolution'>libevdev_get_abs_resolution</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_current_slot.html"
+                                  title='fn evdev_sys::libevdev_get_current_slot'>libevdev_get_current_slot</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_driver_version.html"
+                                  title='fn evdev_sys::libevdev_get_driver_version'>libevdev_get_driver_version</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_event_value.html"
+                                  title='fn evdev_sys::libevdev_get_event_value'>libevdev_get_event_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_fd.html"
+                                  title='fn evdev_sys::libevdev_get_fd'>libevdev_get_fd</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_id_bustype.html"
+                                  title='fn evdev_sys::libevdev_get_id_bustype'>libevdev_get_id_bustype</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_id_product.html"
+                                  title='fn evdev_sys::libevdev_get_id_product'>libevdev_get_id_product</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_id_vendor.html"
+                                  title='fn evdev_sys::libevdev_get_id_vendor'>libevdev_get_id_vendor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_id_version.html"
+                                  title='fn evdev_sys::libevdev_get_id_version'>libevdev_get_id_version</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_log_priority.html"
+                                  title='fn evdev_sys::libevdev_get_log_priority'>libevdev_get_log_priority</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_name.html"
+                                  title='fn evdev_sys::libevdev_get_name'>libevdev_get_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_num_slots.html"
+                                  title='fn evdev_sys::libevdev_get_num_slots'>libevdev_get_num_slots</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_phys.html"
+                                  title='fn evdev_sys::libevdev_get_phys'>libevdev_get_phys</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_repeat.html"
+                                  title='fn evdev_sys::libevdev_get_repeat'>libevdev_get_repeat</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_slot_value.html"
+                                  title='fn evdev_sys::libevdev_get_slot_value'>libevdev_get_slot_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_get_uniq.html"
+                                  title='fn evdev_sys::libevdev_get_uniq'>libevdev_get_uniq</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_grab.html"
+                                  title='fn evdev_sys::libevdev_grab'>libevdev_grab</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_has_event_code.html"
+                                  title='fn evdev_sys::libevdev_has_event_code'>libevdev_has_event_code</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_has_event_pending.html"
+                                  title='fn evdev_sys::libevdev_has_event_pending'>libevdev_has_event_pending</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_has_event_type.html"
+                                  title='fn evdev_sys::libevdev_has_event_type'>libevdev_has_event_type</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_has_property.html"
+                                  title='fn evdev_sys::libevdev_has_property'>libevdev_has_property</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_kernel_set_abs_info.html"
+                                  title='fn evdev_sys::libevdev_kernel_set_abs_info'>libevdev_kernel_set_abs_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_kernel_set_led_value.html"
+                                  title='fn evdev_sys::libevdev_kernel_set_led_value'>libevdev_kernel_set_led_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_kernel_set_led_values.html"
+                                  title='fn evdev_sys::libevdev_kernel_set_led_values'>libevdev_kernel_set_led_values</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_new.html"
+                                  title='fn evdev_sys::libevdev_new'>libevdev_new</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_new_from_fd.html"
+                                  title='fn evdev_sys::libevdev_new_from_fd'>libevdev_new_from_fd</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_next_event.html"
+                                  title='fn evdev_sys::libevdev_next_event'>libevdev_next_event</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_property_from_name.html"
+                                  title='fn evdev_sys::libevdev_property_from_name'>libevdev_property_from_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_property_from_name_n.html"
+                                  title='fn evdev_sys::libevdev_property_from_name_n'>libevdev_property_from_name_n</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_property_get_name.html"
+                                  title='fn evdev_sys::libevdev_property_get_name'>libevdev_property_get_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_flat.html"
+                                  title='fn evdev_sys::libevdev_set_abs_flat'>libevdev_set_abs_flat</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_fuzz.html"
+                                  title='fn evdev_sys::libevdev_set_abs_fuzz'>libevdev_set_abs_fuzz</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_info.html"
+                                  title='fn evdev_sys::libevdev_set_abs_info'>libevdev_set_abs_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_maximum.html"
+                                  title='fn evdev_sys::libevdev_set_abs_maximum'>libevdev_set_abs_maximum</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_minimum.html"
+                                  title='fn evdev_sys::libevdev_set_abs_minimum'>libevdev_set_abs_minimum</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_abs_resolution.html"
+                                  title='fn evdev_sys::libevdev_set_abs_resolution'>libevdev_set_abs_resolution</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_clock_id.html"
+                                  title='fn evdev_sys::libevdev_set_clock_id'>libevdev_set_clock_id</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_device_log_function.html"
+                                  title='fn evdev_sys::libevdev_set_device_log_function'>libevdev_set_device_log_function</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_event_value.html"
+                                  title='fn evdev_sys::libevdev_set_event_value'>libevdev_set_event_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_fd.html"
+                                  title='fn evdev_sys::libevdev_set_fd'>libevdev_set_fd</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_id_bustype.html"
+                                  title='fn evdev_sys::libevdev_set_id_bustype'>libevdev_set_id_bustype</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_id_product.html"
+                                  title='fn evdev_sys::libevdev_set_id_product'>libevdev_set_id_product</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_id_vendor.html"
+                                  title='fn evdev_sys::libevdev_set_id_vendor'>libevdev_set_id_vendor</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_id_version.html"
+                                  title='fn evdev_sys::libevdev_set_id_version'>libevdev_set_id_version</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_log_function.html"
+                                  title='fn evdev_sys::libevdev_set_log_function'>libevdev_set_log_function</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_log_priority.html"
+                                  title='fn evdev_sys::libevdev_set_log_priority'>libevdev_set_log_priority</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_name.html"
+                                  title='fn evdev_sys::libevdev_set_name'>libevdev_set_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_phys.html"
+                                  title='fn evdev_sys::libevdev_set_phys'>libevdev_set_phys</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_slot_value.html"
+                                  title='fn evdev_sys::libevdev_set_slot_value'>libevdev_set_slot_value</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.libevdev_set_uniq.html"
+                                  title='fn evdev_sys::libevdev_set_uniq'>libevdev_set_uniq</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__enum_ty.html"
+                                  title='type evdev_sys::__enum_ty'>__enum_ty</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.libevdev_grab_mode.html"
+                                  title='type evdev_sys::libevdev_grab_mode'>libevdev_grab_mode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.libevdev_led_value.html"
+                                  title='type evdev_sys::libevdev_led_value'>libevdev_led_value</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.libevdev_log_priority.html"
+                                  title='type evdev_sys::libevdev_log_priority'>libevdev_log_priority</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.libevdev_read_flag.html"
+                                  title='type evdev_sys::libevdev_read_flag'>libevdev_read_flag</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.libevdev_read_status.html"
+                                  title='type evdev_sys::libevdev_read_status'>libevdev_read_status</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "evdev_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
